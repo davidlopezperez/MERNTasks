@@ -14,7 +14,7 @@ connectDataBase();
 app.use(cors());
 
 //Habilitar express.json
-app.use(express.json({extended:true}));
+app.use(express.json({extended : true}));
 
 //Crear el puerto
 //puerto de la app
