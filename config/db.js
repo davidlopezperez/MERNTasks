@@ -5,12 +5,11 @@ require('dotenv').config({path: 'variables.env'});
 const connectDataBase = async () => {
     try {
         await mongoose.connect(process.env.DB_MONGO, {
-            useCreateIndex: true,
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false
         });
-        console.log('DB CONNECTED')
+        console.log('DB CONNECTED');
             
     } catch (error) {
         console.log(error);
