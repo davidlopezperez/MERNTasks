@@ -18,7 +18,7 @@ app.use(express.json({extended : true}));
 
 //Crear el puerto
 //puerto de la app
-const port = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 //Importar las rutas
 //Todas estas rutas estan dentro de la carpeta routes que a su vez tienen los verbos para las peticiones http
@@ -39,6 +39,6 @@ app.use('/api/tasks', require('./routes/task'));
 //     res.send('Hola mundo');
 // })
 //arrancar el app (el servidor)
-app.listen(port, '0.0.0.0', () => {
-    console.log(`El servidor esta funcionando en el puerto ${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`El servidor esta funcionando en el puerto ${PORT}`);
 });
